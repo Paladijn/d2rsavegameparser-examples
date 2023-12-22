@@ -61,7 +61,7 @@ public class SocketRewards {
 
     private void checkCharacterForSocketReward(final D2Character d2Character, final Path filename, final StringBuilder filesWithSocketAvailable) {
         for (Difficulty difficulty : Difficulty.values()) {
-            if (d2Character.questDataPerDifficulty().get(difficulty.ordinal()).socketQuestAvailable()) {
+            if (d2Character.questDataPerDifficulty().get(difficulty.ordinal()).socketQuestRewardAvailable()) {
                 filesWithSocketAvailable
                         .append("\n")
                         .append(filename)
