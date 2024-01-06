@@ -5,13 +5,13 @@ It requires JDK 21 to compile. If you don't have it grab the latest version of y
 
 Currently the following examples are available:
 ### List all characters with the socket reward quest still available.
-Call com.github.paladijn.d2rsavegameparser.examples.Main with the following arguments
+Call io.github.paladijn.d2rsavegameparser.examples.Main with the following arguments
 > socket "C:\Users\Paladijn\Documents\Save Games\Diablo II Resurrected"  
 
 Which will result in a list of all character files, along with the difficulty, that still have the socket quest reward available. This will save you some time running another one to Normal A5.
 
 ### List all set items (with proper translations)
-Call com.github.paladijn.d2rsavegameparser.examples.Main with the following arguments
+Call io.github.paladijn.d2rsavegameparser.examples.Main with the following arguments
 > sets "C:\Users\Paladijn\Documents\Save Games\Diablo II Resurrected" enUS
 
 This will result in a list of all set items (including double ones and the ones in shared stash) and their location on the character:  

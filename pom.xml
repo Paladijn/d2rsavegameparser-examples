@@ -12,15 +12,15 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <d2rsavegameparser.version>1.0.0</d2rsavegameparser.version>
+        <d2rsavegameparser.version>1.2.0</d2rsavegameparser.version>
         <slf4j.version>2.0.9</slf4j.version>
         <logback.version>1.4.14</logback.version>
-        <jackson.version>2.16.0</jackson.version>
+        <jackson.version>2.16.1</jackson.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.github.paladijn</groupId>
+            <groupId>io.github.paladijn</groupId>
             <artifactId>d2rsavegameparser</artifactId>
             <version>${d2rsavegameparser.version}</version>
         </dependency>

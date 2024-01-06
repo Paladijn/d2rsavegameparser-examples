@@ -13,11 +13,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package com.github.paladijn.d2rsavegameparser.examples;
+package io.github.paladijn.d2rsavegameparser.examples;
 
-import com.github.paladijn.d2rsavegameparser.model.D2Character;
-import com.github.paladijn.d2rsavegameparser.parser.CharacterParser;
-import com.github.paladijn.d2rsavegameparser.parser.ParseException;
+import io.github.paladijn.d2rsavegameparser.model.D2Character;
+import io.github.paladijn.d2rsavegameparser.parser.CharacterParser;
+import io.github.paladijn.d2rsavegameparser.parser.ParseException;
 import org.slf4j.Logger;
 
 import java.nio.ByteBuffer;

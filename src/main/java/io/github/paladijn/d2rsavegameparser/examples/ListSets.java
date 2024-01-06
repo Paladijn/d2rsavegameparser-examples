@@ -13,16 +13,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package com.github.paladijn.d2rsavegameparser.examples;
+package io.github.paladijn.d2rsavegameparser.examples;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.paladijn.d2rsavegameparser.examples.model.ItemName;
-import com.github.paladijn.d2rsavegameparser.model.D2Character;
-import com.github.paladijn.d2rsavegameparser.model.Item;
-import com.github.paladijn.d2rsavegameparser.model.ItemQuality;
-import com.github.paladijn.d2rsavegameparser.model.SharedStashTab;
-import com.github.paladijn.d2rsavegameparser.parser.SharedStashParser;
+import io.github.paladijn.d2rsavegameparser.examples.model.ItemName;
+import io.github.paladijn.d2rsavegameparser.model.D2Character;
+import io.github.paladijn.d2rsavegameparser.model.Item;
+import io.github.paladijn.d2rsavegameparser.model.ItemQuality;
+import io.github.paladijn.d2rsavegameparser.model.SharedStashTab;
+import io.github.paladijn.d2rsavegameparser.parser.SharedStashParser;
 import org.slf4j.Logger;
 
 import java.io.IOException;
@@ -38,7 +38,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static com.github.paladijn.d2rsavegameparser.examples.SampleHelpers.getCharacter;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class ListSets {
@@ -85,7 +84,7 @@ public class ListSets {
             for (Path savegame: savegames) {
                 final ByteBuffer byteBuffer = ByteBuffer.wrap(Files.readAllBytes(savegame));
 
-                getCharacter(byteBuffer, savegame)
+                SampleHelpers.getCharacter(byteBuffer, savegame)
                         .ifPresent(d2Character -> {
                             if (d2Character.hardcore() == filterHardcore) {
                                 filterSetItems(savegame.getFileName(), d2Character, setItems);

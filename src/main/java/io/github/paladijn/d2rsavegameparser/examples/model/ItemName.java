@@ -13,26 +13,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package com.github.paladijn.d2rsavegameparser.examples;
+package io.github.paladijn.d2rsavegameparser.examples.model;
 
-import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public enum SampleTypes {
-    SOCKET_REWARDS("socket"),
-    LIST_SETS("sets"),
-
-    UNKNOWN("none");
-
-    private final String parameter;
-
-    SampleTypes(String parameter) {
-        this.parameter = parameter;
-    }
-
-    public static SampleTypes findByParameter(String parameter) {
-        return Arrays.stream(SampleTypes.values())
-                .filter(sampleType -> sampleType.parameter.equals(parameter))
-                .findAny()
-                .orElse(UNKNOWN);
-    }
-}
+public record ItemName(int id, @JsonProperty("Key") String key, String enUS, String zhTW, String deDE, String esES, String frFR, String itIT,
+                       String koKR, String plPL, String esMX, String jaJP, String ptBR, String ruRU, String zhCN) { }
